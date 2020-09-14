@@ -26,7 +26,8 @@ def softer_softmax(x, axis=-1):
         raise ValueError('Cannot apply softmax to a tensor that is 1D. '
                          'Received input: %s' % x)
 
-
+        
+# softmax 결과물을 softer_softmax로 변환
 def softmax2softer_softmax(x):
     y = []
 
@@ -39,7 +40,7 @@ def softmax2softer_softmax(x):
         for j in range(len(x[0])):
             softer_x.append(np.exp(distilled_x[j])/sum(np.exp(distilled_x)))
 
-        y.append(softer_x)  # 분자.분모
+        y.append(softer_x) 
     y = np.array(y)
     return y
 
@@ -167,7 +168,7 @@ def student_model1(teacher_model):
     print(model.predict(x_test))
 
     model.layers[-1].activation = activations.softmax  # 활성화 함수 교체
-    model.save("test.h5")
+    model.save("test.h5")  # save, load로 교체한 활성화 함수 적용
     model = load_model("test.h5")
     test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0)
     result_acc.append(test_acc)
@@ -231,6 +232,7 @@ hist1 = student_model1(teacher)  # improved
 
 hist2 = student_model2()
 
+# 교사 모델, 증류받은 모델의 softer_softmax, 증류받은 모델의 softmax, 일반 모델
 print(result_acc)
 print(result_loss)
 
