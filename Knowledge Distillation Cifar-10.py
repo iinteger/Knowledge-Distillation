@@ -45,7 +45,6 @@ def softmax2softer_softmax(x):
 
 
 dataset = cifar100
-dataset_name = "cifar100"
 img_rows = 32
 img_cols = 32
 channels = 3
