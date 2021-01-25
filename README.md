@@ -2,7 +2,7 @@
 
 
 
-* Ensemble 방법은 model의 성능을 높여줄 수 있는 좋은 방법이지만 소모되는 컴퓨팅 파워와 메모리 공간 대비 얻어지는 성능의 효율이 굉장히 낮으며 이는 제한된 컴퓨팅 자원에서 최대한 효율적인 model을 구축해야 할 때 걸림돌이 됨. 따라서 거대한 ensemble model(교사 model)로 얻을 수 있는 일반화 능력을 상대적으로 작은 model(student model)에 증류하는 방법으로 성능 향상을 구현
+* Ensemble 방법은 모델의 성능을 높여줄 수 있는 좋은 방법이지만 소모되는 컴퓨팅 파워와 메모리 공간 대비 얻어지는 성능의 효율이 굉장히 낮으며 이는 제한된 컴퓨팅 자원에서 최대한 효율적인 모델을 구축해야 할 때 걸림돌이 됨. 따라서 거대한 ensemble 모델(Teacher model)로 얻을 수 있는 일반화 능력을 상대적으로 작은 모델(Student model)에 증류하는 방법으로 성능 향상을 구현
 
 
 
@@ -38,4 +38,4 @@
 
     ![Softmax](/image/그림3.png)
 
-    기존 Training은 model의 softmax output과 one-hot label을 비교해 loss를 계산했지만, distillation을 사용한 model의 경우, 학습이 완료된 teacher model의 Softer softmax output과 student model의 Softer softmax output을 비교해 loss를 계산함
+    기존 학습은 모델의 softmax output과 one-hot label을 비교해 loss를 계산했지만, distillation을 사용한 의 경우, 학습이 완료된 teacher model의 Softer softmax output과 student model의 Softer softmax output을 비교해 loss를 계산함
