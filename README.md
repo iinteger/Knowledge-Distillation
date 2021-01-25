@@ -6,9 +6,11 @@
 
 
 
+
+
 * Methods
 
-  **Softer Softmax**
+  * **Softer Softmax**
 
     기존의 Softmax는 exponential 연산으로 인해 1에 가까운 확률은 더 1로 가중되고 0에 가까운 값은 더 0으로 가중되는 특성이 존재. 이는 정답이 아닌 class의 정보(**dark knowledge**)를 축소시키는 단점이 있으므로 이를 완화한 Softer softmax 사용하여 정보가 잘 전달되도록 함
 
@@ -21,7 +23,7 @@
     T=1일 때 일반적인 Softmax 함수이며, T > 1일때 기존보다 더 완만한 distribution을 가지는 Softer softmax임
 
   
-<br/><br/>
+</br><br/>
   * **Soft label**
 
     기존의 one-hot Encoding 된 label을 hard label이라고 하며, Softer softmax의 결과로 나온 확률값을 Soft label이라고 함. 
@@ -33,7 +35,7 @@
     위 그림과 같이 Soft label은 데이터의 정보를 hard label보다 잘 반영함
 
     
-<br/><br/>
+</br><br/>
   * **Distillation loss**
 
     
