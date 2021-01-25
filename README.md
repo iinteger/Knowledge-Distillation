@@ -14,7 +14,9 @@
 
     
 
-    <img src="/image/그림1.png" align="left">
+    
+
+    ![Softmax](/image/그림1.png)
 
     T=1일 때 일반적인 Softmax 함수이며, T > 1일때 기존보다 더 완만한 distribution을 가지는 Softer softmax임
 
@@ -26,7 +28,7 @@
 
     
 
-    <img src="/image/그림2.png" align="left">
+    ![Softmax](/image/그림2.png)
 
     위 그림과 같이 Soft label은 데이터의 정보를 hard label보다 잘 반영함
 
@@ -35,7 +37,7 @@
   * **Distillation loss**
 
     
-    
-    <img src="/image/그림3.png" align="left">
-    
+
+    ![Softmax](/image/그림3.png)
+
     기존 Training은 model의 softmax output과 one-hot label을 비교해 loss를 계산했지만, distillation을 사용한 model의 경우, 학습이 완료된 teacher model의 Softer softmax output과 student model의 Softer softmax output을 비교해 loss를 계산함
