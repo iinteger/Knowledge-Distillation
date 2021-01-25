@@ -8,7 +8,7 @@
 
 * Methods
 
-  * **Softer Softmax**
+  **Softer Softmax**
 
     기존의 Softmax는 exponential 연산으로 인해 1에 가까운 확률은 더 1로 가중되고 0에 가까운 값은 더 0으로 가중되는 특성이 존재. 이는 정답이 아닌 class의 정보(**dark knowledge**)를 축소시키는 단점이 있으므로 이를 완화한 Softer softmax 사용하여 정보가 잘 전달되도록 함
 
