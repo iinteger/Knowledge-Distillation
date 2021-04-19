@@ -38,4 +38,4 @@
 
     ![Softmax](/image/그림3.png)
 
-    기존 학습은 모델의 softmax output과 one-hot label을 비교해 loss를 계산했지만, distillation을 사용한 의 경우, 학습이 완료된 teacher model의 Softer softmax output과 student model의 Softer softmax output을 비교해 loss를 계산함
+    기존 학습은 모델의 softmax output과 one-hot label을 비교해 loss(1)를 계산했지만 distillation을 사용한 경우, 학습이 완료된 teacher model의 Softer softmax output과 student model의 Softer softmax output을 비교하여 얻은 loss(2)를 loss(1)과 적당한 비율로 더해 사용함
